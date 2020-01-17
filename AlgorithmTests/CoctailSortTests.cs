@@ -1,18 +1,21 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Algorithm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Algorithm.Tests
 {
     [TestClass()]
-    public class BubbleSortTests
+    public class CoctailSortTests
     {
         [TestMethod()]
         public void SortTest()
         {
             // arrange
-            var bubble = new BubbleSort<int>();
+            var cocktail = new CoctailSort<int>();
 
             var rnd = new Random();
             var items = new List<int>();
@@ -22,16 +25,16 @@ namespace Algorithm.Tests
                 items.Add(rnd.Next(0, 100));
             }
 
-            bubble.Items.AddRange(items);
+            cocktail.Items.AddRange(items);
             var sorted = items.OrderBy(x => x).ToArray();
 
             // act
-            bubble.Sort();
+            cocktail.Sort();
 
             // assert
             for (int i = 0; i < items.Count; i++)
             {
-                Assert.AreEqual(sorted[i], bubble.Items[i]);
+                Assert.AreEqual(sorted[i], cocktail.Items[i]);
             }
         }
     }
