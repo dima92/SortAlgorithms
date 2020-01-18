@@ -1,4 +1,6 @@
-﻿namespace SortAlgorithms
+﻿using System;
+
+namespace SortAlgorithms
 {
     partial class Form1
     {
@@ -37,6 +39,7 @@
             this.FillButton = new System.Windows.Forms.Button();
             this.FillTextBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BubbleSortBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.verticalProgressBar1 = new VerticalProgressBar.VerticalProgressBar();
             this.panel1.SuspendLayout();
@@ -127,14 +130,25 @@
             this.panel3.Size = new System.Drawing.Size(412, 124);
             this.panel3.TabIndex = 4;
             // 
+            // BubbleSortBtn
+            // 
+            this.BubbleSortBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.BubbleSortBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.BubbleSortBtn.Location = new System.Drawing.Point(12, 134);
+            this.BubbleSortBtn.Name = "BubbleSortBtn";
+            this.BubbleSortBtn.Size = new System.Drawing.Size(75, 23);
+            this.BubbleSortBtn.TabIndex = 6;
+            this.BubbleSortBtn.Text = "BubbleSort";
+            this.BubbleSortBtn.UseVisualStyleBackColor = true;
+            this.BubbleSortBtn.Click += new System.EventHandler(this.BubbleSortBtn_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 13);
+            this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "10";
             // 
             // verticalProgressBar1
             // 
@@ -155,6 +169,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BubbleSortBtn);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -185,6 +200,7 @@
         private System.Windows.Forms.Panel panel3;
         private VerticalProgressBar.VerticalProgressBar verticalProgressBar1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BubbleSortBtn;
     }
 }
 
