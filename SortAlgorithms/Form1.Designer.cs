@@ -39,9 +39,8 @@ namespace SortAlgorithms
             this.FillButton = new System.Windows.Forms.Button();
             this.FillTextBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.BubbleSortBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.verticalProgressBar1 = new VerticalProgressBar.VerticalProgressBar();
+            this.BubbleSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -124,11 +123,18 @@ namespace SortAlgorithms
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.verticalProgressBar1);
             this.panel3.Location = new System.Drawing.Point(387, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(412, 124);
             this.panel3.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 5;
             // 
             // BubbleSortBtn
             // 
@@ -141,28 +147,6 @@ namespace SortAlgorithms
             this.BubbleSortBtn.Text = "BubbleSort";
             this.BubbleSortBtn.UseVisualStyleBackColor = true;
             this.BubbleSortBtn.Click += new System.EventHandler(this.BubbleSortBtn_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 5;
-            // 
-            // verticalProgressBar1
-            // 
-            this.verticalProgressBar1.BorderStyle = VerticalProgressBar.BorderStyles.Classic;
-            this.verticalProgressBar1.Color = System.Drawing.Color.Blue;
-            this.verticalProgressBar1.Location = new System.Drawing.Point(3, 3);
-            this.verticalProgressBar1.Maximum = 100;
-            this.verticalProgressBar1.Minimum = 0;
-            this.verticalProgressBar1.Name = "verticalProgressBar1";
-            this.verticalProgressBar1.Size = new System.Drawing.Size(18, 91);
-            this.verticalProgressBar1.Step = 1;
-            this.verticalProgressBar1.Style = VerticalProgressBar.Styles.Solid;
-            this.verticalProgressBar1.TabIndex = 0;
-            this.verticalProgressBar1.Value = 10;
             // 
             // Form1
             // 
@@ -198,7 +182,6 @@ namespace SortAlgorithms
         private System.Windows.Forms.Button FillButton;
         private System.Windows.Forms.TextBox FillTextBox;
         private System.Windows.Forms.Panel panel3;
-        private VerticalProgressBar.VerticalProgressBar verticalProgressBar1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BubbleSortBtn;
     }
