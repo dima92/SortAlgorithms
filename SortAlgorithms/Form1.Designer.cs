@@ -44,6 +44,9 @@ namespace SortAlgorithms
             this.TimeLbl = new System.Windows.Forms.Label();
             this.CompareLbl = new System.Windows.Forms.Label();
             this.SwopLbl = new System.Windows.Forms.Label();
+            this.CocktailSortBtn = new System.Windows.Forms.Button();
+            this.InsertSortBtn = new System.Windows.Forms.Button();
+            this.ShellSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -178,11 +181,44 @@ namespace SortAlgorithms
             this.SwopLbl.TabIndex = 9;
             this.SwopLbl.Text = "Кол-во обменов";
             // 
+            // CocktailSortBtn
+            // 
+            this.CocktailSortBtn.Location = new System.Drawing.Point(93, 130);
+            this.CocktailSortBtn.Name = "CocktailSortBtn";
+            this.CocktailSortBtn.Size = new System.Drawing.Size(75, 23);
+            this.CocktailSortBtn.TabIndex = 10;
+            this.CocktailSortBtn.Text = "CocktailSort";
+            this.CocktailSortBtn.UseVisualStyleBackColor = true;
+            this.CocktailSortBtn.Click += new System.EventHandler(this.CocktailSortBtn_Click);
+            // 
+            // InsertSortBtn
+            // 
+            this.InsertSortBtn.Location = new System.Drawing.Point(174, 130);
+            this.InsertSortBtn.Name = "InsertSortBtn";
+            this.InsertSortBtn.Size = new System.Drawing.Size(75, 23);
+            this.InsertSortBtn.TabIndex = 11;
+            this.InsertSortBtn.Text = "InsertSort";
+            this.InsertSortBtn.UseVisualStyleBackColor = true;
+            this.InsertSortBtn.Click += new System.EventHandler(this.InsertSortBtn_Click);
+            // 
+            // ShellSortBtn
+            // 
+            this.ShellSortBtn.Location = new System.Drawing.Point(255, 130);
+            this.ShellSortBtn.Name = "ShellSortBtn";
+            this.ShellSortBtn.Size = new System.Drawing.Size(75, 23);
+            this.ShellSortBtn.TabIndex = 12;
+            this.ShellSortBtn.Text = "ShellSort";
+            this.ShellSortBtn.UseVisualStyleBackColor = true;
+            this.ShellSortBtn.Click += new System.EventHandler(this.ShellSortBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ShellSortBtn);
+            this.Controls.Add(this.InsertSortBtn);
+            this.Controls.Add(this.CocktailSortBtn);
             this.Controls.Add(this.SwopLbl);
             this.Controls.Add(this.CompareLbl);
             this.Controls.Add(this.TimeLbl);
@@ -221,6 +257,9 @@ namespace SortAlgorithms
         private System.Windows.Forms.Label TimeLbl;
         private System.Windows.Forms.Label CompareLbl;
         private System.Windows.Forms.Label SwopLbl;
+        private System.Windows.Forms.Button CocktailSortBtn;
+        private System.Windows.Forms.Button InsertSortBtn;
+        private System.Windows.Forms.Button ShellSortBtn;
     }
 }
 
