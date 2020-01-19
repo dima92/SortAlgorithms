@@ -41,6 +41,9 @@ namespace SortAlgorithms
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.BubbleSortBtn = new System.Windows.Forms.Button();
+            this.TimeLbl = new System.Windows.Forms.Label();
+            this.CompareLbl = new System.Windows.Forms.Label();
+            this.SwopLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -140,7 +143,7 @@ namespace SortAlgorithms
             // 
             this.BubbleSortBtn.BackColor = System.Drawing.SystemColors.Control;
             this.BubbleSortBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.BubbleSortBtn.Location = new System.Drawing.Point(12, 134);
+            this.BubbleSortBtn.Location = new System.Drawing.Point(12, 130);
             this.BubbleSortBtn.Name = "BubbleSortBtn";
             this.BubbleSortBtn.Size = new System.Drawing.Size(75, 23);
             this.BubbleSortBtn.TabIndex = 6;
@@ -148,11 +151,41 @@ namespace SortAlgorithms
             this.BubbleSortBtn.UseVisualStyleBackColor = true;
             this.BubbleSortBtn.Click += new System.EventHandler(this.BubbleSortBtn_Click);
             // 
+            // TimeLbl
+            // 
+            this.TimeLbl.AutoSize = true;
+            this.TimeLbl.Location = new System.Drawing.Point(12, 156);
+            this.TimeLbl.Name = "TimeLbl";
+            this.TimeLbl.Size = new System.Drawing.Size(40, 13);
+            this.TimeLbl.TabIndex = 7;
+            this.TimeLbl.Text = "Время";
+            // 
+            // CompareLbl
+            // 
+            this.CompareLbl.AutoSize = true;
+            this.CompareLbl.Location = new System.Drawing.Point(12, 181);
+            this.CompareLbl.Name = "CompareLbl";
+            this.CompareLbl.Size = new System.Drawing.Size(98, 13);
+            this.CompareLbl.TabIndex = 8;
+            this.CompareLbl.Text = "Кол-во сравнений";
+            // 
+            // SwopLbl
+            // 
+            this.SwopLbl.AutoSize = true;
+            this.SwopLbl.Location = new System.Drawing.Point(12, 206);
+            this.SwopLbl.Name = "SwopLbl";
+            this.SwopLbl.Size = new System.Drawing.Size(88, 13);
+            this.SwopLbl.TabIndex = 9;
+            this.SwopLbl.Text = "Кол-во обменов";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SwopLbl);
+            this.Controls.Add(this.CompareLbl);
+            this.Controls.Add(this.TimeLbl);
             this.Controls.Add(this.BubbleSortBtn);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -168,6 +201,7 @@ namespace SortAlgorithms
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -184,6 +218,9 @@ namespace SortAlgorithms
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BubbleSortBtn;
+        private System.Windows.Forms.Label TimeLbl;
+        private System.Windows.Forms.Label CompareLbl;
+        private System.Windows.Forms.Label SwopLbl;
     }
 }
 
