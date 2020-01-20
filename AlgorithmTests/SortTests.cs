@@ -17,7 +17,7 @@ namespace Algorithm.Tests
         public void Init()
         {
             Items.Clear();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10000; i++)
             {
                 Items.Add(rnd.Next(0, 1000));
             }
@@ -177,5 +177,21 @@ namespace Algorithm.Tests
             }
         }
 
+        [TestMethod()]
+        public void RadixSortTest()
+        {
+            // arrange
+            var radix = new RadixSort<int>();
+            radix.Items.AddRange(Items);
+
+            // act
+            radix.Sort();
+
+            // assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], radix.Items[i]);
+            }
+        }
     }
 }
