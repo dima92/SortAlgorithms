@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Algorithm
 {
-    public class CoctailSort<T> : AlgorithmBase<T> where T : IComparable
+    public class CocktailSort<T> : AlgorithmBase<T> where T : IComparable
     {
-        public CoctailSort() { }
+        public CocktailSort() { }
 
-        public CoctailSort(IEnumerable<T> items) : base(items) { }
+        public CocktailSort(IEnumerable<T> items) : base(items) { }
 
         protected override void MakeSort()
         {

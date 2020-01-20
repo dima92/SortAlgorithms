@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Algorithm.DataStructures;
 
 namespace Algorithm.Tests
 {
@@ -46,7 +47,7 @@ namespace Algorithm.Tests
         public void CocktailSortTest()
         {
             // arrange
-            var cocktail = new CoctailSort<int>();
+            var cocktail = new CocktailSort<int>();
             cocktail.Items.AddRange(Items);
 
             // act
@@ -128,23 +129,6 @@ namespace Algorithm.Tests
         }
 
         [TestMethod()]
-        public void HeapSortTest()
-        {
-            // arrange
-            var heap = new HeapSort<int>();
-            heap.Items.AddRange(Items);
-
-            // act
-            heap.Sort();
-
-            // assert
-            for (int i = 0; i < Items.Count; i++)
-            {
-                Assert.AreEqual(Sorted[i], heap.Items[i]);
-            }
-        }
-
-        [TestMethod()]
         public void SelectionSortTest()
         {
             // arrange
@@ -160,5 +144,22 @@ namespace Algorithm.Tests
                 Assert.AreEqual(Sorted[i], selection.Items[i]);
             }
         }
+
+        [TestMethod()]
+        public void HeapSortTest()
+        {
+            // arrange
+            var heap = new Heap<int>(Items);
+
+            // act
+            heap.Sort();
+
+            // assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], heap.Items[i]);
+            }
+        }
+
     }
 }

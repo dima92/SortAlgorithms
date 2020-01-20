@@ -1,14 +1,17 @@
 ﻿using Algorithm;
+using Algorithm.DataStructures;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SortAlgorithms
 {
     public partial class Form1 : Form
     {
-        private readonly List<SortedItem> items = new List<SortedItem>();
+        List<SortedItem> items = new List<SortedItem>();
+
         public Form1()
         {
             InitializeComponent();
@@ -29,21 +32,19 @@ namespace SortAlgorithms
 
         private void FillButton_Click(object sender, EventArgs e)
         {
+            if (int.TryParse(FillTextBox.Text, out int value))
             {
-                if (int.TryParse(FillTextBox.Text, out int value))
+                var rnd = new Random();
+                for (int i = 0; i < value; i++)
                 {
-                    var rnd = new Random();
-                    for (int i = 0; i < value; i++)
-                    {
-                        var item = new SortedItem(rnd.Next(100), items.Count);
-                        items.Add(item);
-                    }
+                    var item = new SortedItem(rnd.Next(100), items.Count);
+                    items.Add(item);
                 }
-
-                RefreshItems();
-
-                FillTextBox.Text = "";
             }
+
+            RefreshItems();
+
+            FillTextBox.Text = "";
         }
 
         private void DrawItems(List<SortedItem> items)
@@ -56,6 +57,8 @@ namespace SortAlgorithms
                 panel3.Controls.Add(item.ProgressBar);
                 panel3.Controls.Add(item.Label);
             }
+
+            panel3.Refresh();
         }
 
         private void RefreshItems()
@@ -67,13 +70,29 @@ namespace SortAlgorithms
 
             DrawItems(items);
         }
+
+
+
         private void Algorithm_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
+            e.Item1.SetColor(Color.Aqua);
+            e.Item2.SetColor(Color.Brown);
+            panel3.Refresh();
+
+            Thread.Sleep(20);
+
             var temp = e.Item1.Number;
             e.Item1.SetPosition(e.Item2.Number);
             e.Item2.SetPosition(temp);
-
             panel3.Refresh();
+
+            Thread.Sleep(20);
+
+            e.Item1.SetColor(Color.Blue);
+            e.Item2.SetColor(Color.Blue);
+            panel3.Refresh();
+
+            Thread.Sleep(20);
         }
 
         private void Algorithm_CompareEvent(object sender, Tuple<SortedItem, SortedItem> e)
@@ -82,14 +101,25 @@ namespace SortAlgorithms
             e.Item2.SetColor(Color.Green);
             panel3.Refresh();
 
+            Thread.Sleep(20);
+
             e.Item1.SetColor(Color.Blue);
             e.Item2.SetColor(Color.Blue);
             panel3.Refresh();
+
+            Thread.Sleep(20);
         }
+
 
         private void BtnClick(AlgorithmBase<SortedItem> algorithm)
         {
             RefreshItems();
+
+            for (int i = 0; i < algorithm.Items.Count; i++)
+            {
+                algorithm.Items[i].SetPosition(i);
+            }
+            panel3.Refresh();
 
             algorithm.CompareEvent += Algorithm_CompareEvent;
             algorithm.SwopEvent += Algorithm_SwopEvent;
@@ -105,9 +135,10 @@ namespace SortAlgorithms
             var bubble = new BubbleSort<SortedItem>(items);
             BtnClick(bubble);
         }
+
         private void CocktailSortBtn_Click(object sender, EventArgs e)
         {
-            var cocktail = new CoctailSort<SortedItem>(items);
+            var cocktail = new CocktailSort<SortedItem>(items);
             BtnClick(cocktail);
         }
 
@@ -125,8 +156,14 @@ namespace SortAlgorithms
 
         private void SelectionSortBtn_Click(object sender, EventArgs e)
         {
-            var selection = new SelectionSort<SortedItem>(items);
-            BtnClick(selection);
+            var select = new SelectionSort<SortedItem>(items);
+            BtnClick(select);
+        }
+
+        private void HeapSortBtn_Click(object sender, EventArgs e)
+        {
+            var heap = new Heap<SortedItem>(items);
+            BtnClick(heap);
         }
     }
 }
