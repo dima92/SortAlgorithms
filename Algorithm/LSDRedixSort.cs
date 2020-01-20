@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Algorithm
 {
-    public class RadixSort<T> : AlgorithmBase<T> where T : IComparable
+    public class LSDRedixSort<T> : AlgorithmBase<T> where T : IComparable
     {
-        public RadixSort() { }
+        public LSDRedixSort() { }
 
-        public RadixSort(IEnumerable<T> items) : base(items) { }
+        public LSDRedixSort(IEnumerable<T> items) : base(items) { }
 
         protected override void MakeSort()
         {
