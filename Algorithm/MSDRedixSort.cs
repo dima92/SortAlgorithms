@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Algorithm
 {
-    public class MSDRedixSort<T> : AlgorithmBase<T> where T : IComparable
+    public class MsdRedixSort<T> : AlgorithmBase<T> where T : IComparable
     {
-        public MSDRedixSort() { }
+        public MsdRedixSort(IEnumerable<T> items) : base(items) { }
 
-        public MSDRedixSort(IEnumerable<T> items) : base(items) { }
+        public MsdRedixSort() { }
 
         protected override void MakeSort()
         {
@@ -25,15 +25,13 @@ namespace Algorithm
                 groups.Add(new List<T>());
             }
 
-            // Распределение элементов по корзинам.
+            // Распределение элементов по корзинам. 
             foreach (var item in collection)
             {
                 var i = item.GetHashCode();
                 var value = i % (int)Math.Pow(10, step + 1) / (int)Math.Pow(10, step);
                 groups[value].Add(item);
             }
-
-            Items.Clear();
 
             // Сборка элементов.
             foreach (var group in groups)
@@ -57,16 +55,16 @@ namespace Algorithm
             {
                 if (item.GetHashCode() < 0)
                 {
-                    throw new ArgumentException("Поразрядная сортировка поддерживает только целые числа(больше либо равно нуля)", nameof(Items));
+                    throw new ArgumentException("Поразрядная сортировка поддерживает только целые числа (больше либо равно нуля)", nameof(Items));
                 }
 
+                //var l = Convert.ToInt32(Math.Log10(item.GetHashCode()) + 1); // Не работает со значением item = 0. Дает -inf.
                 var l = item.GetHashCode().ToString().Length;
                 if (l > length)
                 {
                     length = l;
                 }
             }
-
             return length;
         }
     }
