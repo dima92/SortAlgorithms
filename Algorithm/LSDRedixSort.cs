@@ -29,14 +29,15 @@ namespace Algorithm
                     groups[value].Add(item);
                 }
 
-                Items.Clear();
+                var j = 0;
 
                 // Сборка элементов.
                 foreach (var group in groups)
                 {
                     foreach (var item in group)
                     {
-                        Items.Add(item);
+                        Set(j, item);
+                        j++;
                     }
                 }
 

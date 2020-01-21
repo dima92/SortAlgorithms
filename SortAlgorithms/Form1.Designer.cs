@@ -51,6 +51,8 @@ namespace SortAlgorithms
             this.HeapSortBtn = new System.Windows.Forms.Button();
             this.GnomeSortBtn = new System.Windows.Forms.Button();
             this.TreeSortBtn = new System.Windows.Forms.Button();
+            this.LSDRedixBtn = new System.Windows.Forms.Button();
+            this.MSDRedixBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -135,7 +137,7 @@ namespace SortAlgorithms
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(387, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(412, 124);
+            this.panel3.Size = new System.Drawing.Size(632, 124);
             this.panel3.TabIndex = 4;
             // 
             // label2
@@ -255,11 +257,33 @@ namespace SortAlgorithms
             this.TreeSortBtn.UseVisualStyleBackColor = true;
             this.TreeSortBtn.Click += new System.EventHandler(this.TreeSortBtn_Click);
             // 
+            // LSDRedixBtn
+            // 
+            this.LSDRedixBtn.Location = new System.Drawing.Point(669, 130);
+            this.LSDRedixBtn.Name = "LSDRedixBtn";
+            this.LSDRedixBtn.Size = new System.Drawing.Size(86, 23);
+            this.LSDRedixBtn.TabIndex = 17;
+            this.LSDRedixBtn.Text = "LSDRedixSort";
+            this.LSDRedixBtn.UseVisualStyleBackColor = true;
+            this.LSDRedixBtn.Click += new System.EventHandler(this.LSDRedixBtn_Click);
+            // 
+            // MSDRedixBtn
+            // 
+            this.MSDRedixBtn.Location = new System.Drawing.Point(761, 130);
+            this.MSDRedixBtn.Name = "MSDRedixBtn";
+            this.MSDRedixBtn.Size = new System.Drawing.Size(89, 23);
+            this.MSDRedixBtn.TabIndex = 18;
+            this.MSDRedixBtn.Text = "MSDRedixSort";
+            this.MSDRedixBtn.UseVisualStyleBackColor = true;
+            this.MSDRedixBtn.Click += new System.EventHandler(this.MSDRedixBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1020, 450);
+            this.Controls.Add(this.MSDRedixBtn);
+            this.Controls.Add(this.LSDRedixBtn);
             this.Controls.Add(this.TreeSortBtn);
             this.Controls.Add(this.GnomeSortBtn);
             this.Controls.Add(this.HeapSortBtn);
@@ -312,6 +336,8 @@ namespace SortAlgorithms
         private System.Windows.Forms.Button HeapSortBtn;
         private System.Windows.Forms.Button GnomeSortBtn;
         private System.Windows.Forms.Button TreeSortBtn;
+        private System.Windows.Forms.Button LSDRedixBtn;
+        private System.Windows.Forms.Button MSDRedixBtn;
     }
 }
 
