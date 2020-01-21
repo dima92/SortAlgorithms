@@ -54,6 +54,7 @@ namespace SortAlgorithms
             this.LSDRedixBtn = new System.Windows.Forms.Button();
             this.MSDRedixBtn = new System.Windows.Forms.Button();
             this.MergeSortBtn = new System.Windows.Forms.Button();
+            this.QuickSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -138,7 +139,7 @@ namespace SortAlgorithms
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(387, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(646, 124);
+            this.panel3.Size = new System.Drawing.Size(628, 124);
             this.panel3.TabIndex = 4;
             // 
             // label2
@@ -288,11 +289,22 @@ namespace SortAlgorithms
             this.MergeSortBtn.UseVisualStyleBackColor = true;
             this.MergeSortBtn.Click += new System.EventHandler(this.MergeSortBtn_Click);
             // 
+            // QuickSortBtn
+            // 
+            this.QuickSortBtn.Location = new System.Drawing.Point(937, 130);
+            this.QuickSortBtn.Name = "QuickSortBtn";
+            this.QuickSortBtn.Size = new System.Drawing.Size(75, 23);
+            this.QuickSortBtn.TabIndex = 20;
+            this.QuickSortBtn.Text = "QuickSort";
+            this.QuickSortBtn.UseVisualStyleBackColor = true;
+            this.QuickSortBtn.Click += new System.EventHandler(this.QuickSortBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 257);
+            this.ClientSize = new System.Drawing.Size(1016, 257);
+            this.Controls.Add(this.QuickSortBtn);
             this.Controls.Add(this.MergeSortBtn);
             this.Controls.Add(this.MSDRedixBtn);
             this.Controls.Add(this.LSDRedixBtn);
@@ -351,6 +363,7 @@ namespace SortAlgorithms
         private System.Windows.Forms.Button LSDRedixBtn;
         private System.Windows.Forms.Button MSDRedixBtn;
         private System.Windows.Forms.Button MergeSortBtn;
+        private System.Windows.Forms.Button QuickSortBtn;
     }
 }
 
