@@ -138,7 +138,7 @@ namespace SortAlgorithms
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(387, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(632, 124);
+            this.panel3.Size = new System.Drawing.Size(646, 124);
             this.panel3.TabIndex = 4;
             // 
             // label2
@@ -292,7 +292,7 @@ namespace SortAlgorithms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 450);
+            this.ClientSize = new System.Drawing.Size(1034, 257);
             this.Controls.Add(this.MergeSortBtn);
             this.Controls.Add(this.MSDRedixBtn);
             this.Controls.Add(this.LSDRedixBtn);
