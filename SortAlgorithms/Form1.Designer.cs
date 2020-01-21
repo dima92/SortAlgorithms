@@ -53,6 +53,7 @@ namespace SortAlgorithms
             this.TreeSortBtn = new System.Windows.Forms.Button();
             this.LSDRedixBtn = new System.Windows.Forms.Button();
             this.MSDRedixBtn = new System.Windows.Forms.Button();
+            this.MergeSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -277,11 +278,22 @@ namespace SortAlgorithms
             this.MSDRedixBtn.UseVisualStyleBackColor = true;
             this.MSDRedixBtn.Click += new System.EventHandler(this.MSDRedixBtn_Click);
             // 
+            // MergeSortBtn
+            // 
+            this.MergeSortBtn.Location = new System.Drawing.Point(856, 130);
+            this.MergeSortBtn.Name = "MergeSortBtn";
+            this.MergeSortBtn.Size = new System.Drawing.Size(75, 23);
+            this.MergeSortBtn.TabIndex = 19;
+            this.MergeSortBtn.Text = "MergeSort";
+            this.MergeSortBtn.UseVisualStyleBackColor = true;
+            this.MergeSortBtn.Click += new System.EventHandler(this.MergeSortBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 450);
+            this.Controls.Add(this.MergeSortBtn);
             this.Controls.Add(this.MSDRedixBtn);
             this.Controls.Add(this.LSDRedixBtn);
             this.Controls.Add(this.TreeSortBtn);
@@ -338,6 +350,7 @@ namespace SortAlgorithms
         private System.Windows.Forms.Button TreeSortBtn;
         private System.Windows.Forms.Button LSDRedixBtn;
         private System.Windows.Forms.Button MSDRedixBtn;
+        private System.Windows.Forms.Button MergeSortBtn;
     }
 }
 
